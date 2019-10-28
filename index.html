@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="pwg.js"></script>
 
 </head>
 <body>
@@ -23,19 +22,26 @@
                 <br>
                 <input type="text" id="display">
                 <br />
-                <input ondragover="slides();" type="range" class="slider" id="slider"  value="1" min="8" max="128" step="1">
+                <input type="range" value="0" class="slider" id="slider" min="0" max="128">
                 <br />
             </div>
         </div>
             <hr>
         <div class="row">
-            <div class="12">
+            <div class="col-2">
                 <button onclick="generate();" id="starter">Generate</button>
-                    <div id="length">
-                        <br />
-                    </div>
+            </div>
+            <div class="col-6">
+                <button id="copier">Copy</button>
+                    <br />
+            </div>
+            <div class="col-3">
+                <div id="length">
+                    <br />
+                </div>
             </div>
         </div>
+        <hr>
 
         <div class="row">
             <div class="col-8">

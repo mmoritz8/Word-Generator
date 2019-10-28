@@ -33,3 +33,17 @@ var values = letterCase;
     document.getElementById("password").value = password;
     document.getElementById("lastPass").innerHTML += password + "<br>";
 }// add pw to textbox
+
+// default length display slider
+
+    document.getElementById("length").innerHTML = "Length: 2";
+
+    document.getElementById("slider") = slider;
+    slider.oninput = function() {
+
+      if (slider.value > 0) {
+        document.getElementById("length").innerHTML = "Length: " + slider.value;
+      } else {
+        document.getElementById("length").innerHTML = "Length: 1 ";
+      }
+    }
