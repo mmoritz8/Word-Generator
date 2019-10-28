@@ -23,32 +23,36 @@
                 <br>
                 <input type="text" id="display">
                 <br />
-                <input type="range"  min="8" max="128" name="slider" id="slider">
+                <input ondragover="slides();" type="range" class="slider" id="slider"  value="1" min="8" max="128" step="1">
                 <br />
             </div>
         </div>
             <hr>
         <div class="row">
             <div class="12">
-                <button onclick="generate()" id="starter">Generate</button>
-                <div id="length"></div>
-                <br />
+                <button onclick="generate();" id="starter">Generate</button>
+                    <div id="length">
+                        <br />
+                    </div>
             </div>
         </div>
-        <hr />
-        <div class="row">
-            <div class="col-8 col-sm-12">
-                <div class="password">
-                    <b>Previously generated passwords</b>
-                    <br />
-                    <div id="lastPass">
 
-                    </div>
+        <div class="row">
+            <div class="col-8">
+                <div id="password">
+                    <b>Previously generated passwords</b>
+                        <br>
                 </div>
-                
             </div>
+
+            <div class="col-4">
+                <div id="lastPass">
+                    <p> </p>
+                </div>
+            </div>     
         </div>
     </div>
+
 <script src="pwg.js"></script>
 </body>
 </html>

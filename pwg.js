@@ -7,7 +7,7 @@ var specialC = "@#$%^&*(){}[]-_+=";
 
 var values = letterCase;
 
-  function generate(){
+  function generate(){    
 
     // set pw length
 
@@ -30,6 +30,6 @@ var values = letterCase;
 
     }
 
-    document.getElementById("display").value = password.value;
-
+    document.getElementById("password").value = password;
+    document.getElementById("lastPass").innerHTML += password + "<br>";
 }// add pw to textbox
