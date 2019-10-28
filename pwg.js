@@ -1,25 +1,35 @@
-var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&(){}-_//";
-var word = [];
+var letterCase = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
-var makeDiv = document.createElement("div")
-document.body.appendChild(makeDiv);
+var lowerC = "abcdefghijklmnopqrstuvwxyz";
+var upperC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberC = "1234567890";
+var specialC = "@#$%^&*(){}[]-_+=";
 
-var passW = document.createElement("p");
-passW.textContent = word;
-makeDiv.appendChild(passW);
+var values = letterCase;
 
+  function generate(){
 
-var copyBtn = document.getElementById("copy");
-var startBtn = document.getElementById("starter");
+    // set pw length
 
-function generatePass() {
-    var sBtn = startBtn.addEventListener("click", function(generatePass) {      
-    for (var i = 0; word.length < 15; i++) {
-        var char = letters.charCodeAt(Math.floor(Math.random() * letters.length));
-console.log(letters);
-        word += char;
+    var complexity = document.getElementById("slider").value;
+
+    // setting an array to the complexity measures
+
+    console.log(lowerC);
+    console.log(upperC);
+    console.log(numberC);
+    console.log(specialC);
+    console.log(values);
+
+    var password = "";
+
+    // create a loop
+
+    for (var i = 0; i<= complexity.length; i++) {
+      password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+
     }
-    return word;
-    console.log(generatePass);
-})
-}
+
+    document.getElementById("display").value = password.value;
+
+}// add pw to textbox

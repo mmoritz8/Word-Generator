@@ -4,14 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Random PW Generator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="pwg.js"></script>
+
 </head>
 <body>
-    <h1>Random Password Generator!!</h1>
-    <div id="wording">
-       
-            <button type="button" id="starter">Generate</button>
-            <button type="button">Copy to Clipboard!</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <h1>Random Password Generator!!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <input type="text" id="display">
+                <br />
+                <input type="range"  min="8" max="128" name="slider" id="slider">
+                <br />
+            </div>
+        </div>
+            <hr>
+        <div class="row">
+            <div class="12">
+                <button onclick="generate()" id="starter">Generate</button>
+                <div id="length"></div>
+                <br />
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-8 col-sm-12">
+                <div class="password">
+                    <b>Previously generated passwords</b>
+                    <br />
+                    <div id="lastPass">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 <script src="pwg.js"></script>
 </body>
