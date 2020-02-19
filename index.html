@@ -15,25 +15,25 @@
 
 <body>
 
-    <nav class="navbar navbar-dark bg-secondary">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Password Generator</a>
     </nav>
 
     <div class="container">
         <div class="result-container">
-            <span id="result"></span>
+            <span id="result"><input type="text" id="display">
+            </span>
             <button class="btn" id="clipboard">
                 <i class="fa fa-clipboard"></i>
             </button>
         </div>
         <div class="settings">
+
             <p>
-                <h5>Things To Include:</h5>
+                <h7>Things To Include:</h7>
             </p>
 
             <div class="setting">
-                <input type="text" id="display">
-                <label for="length">Password Length Restrictions</label>
                 <input type="range" name="slider" id="slider" min="2" max="15" />
 
             </div>
