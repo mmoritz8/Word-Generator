@@ -41,7 +41,7 @@ input[type="text"] {
     background-color: rgb(86, 62, 244);
     box-shadow: 0px 2px 10px gray;
     padding: 20px;
-    width: 400px;
+    width: 60%;
     max-width: 100%;
 }
 
